@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-SurfaceStore-20130708224111;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-SurfaceStore-20130708224111.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="c:\\Users\\Robert\\Documents\\Visual\ Studio\ 2012\\Projects\\SurfaceStore\\SurfaceStore\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
