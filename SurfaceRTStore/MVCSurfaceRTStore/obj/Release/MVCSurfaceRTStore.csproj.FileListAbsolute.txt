@@ -88,3 +88,4 @@ C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\bi
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\obj\Release\MVCSurfaceRTStore.dll
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\obj\Release\MVCSurfaceRTStore.pdb
+C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\obj\Release\MVCSurfaceRTStore.csprojResolveAssemblyReference.cache
