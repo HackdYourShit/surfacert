@@ -8,15 +8,6 @@ using System.Web.Security;
 
 namespace MVCSurfaceRTStore.Models
 {
-    public class ProductModels : DbContext
-    {
-        public ProductModels() : base("DefaultConnection")
-        {
-        }
-
-        public DbSet<Product> Products { get; set; }
-    }
-
     [Table("Product")]
     public class Product
     {
@@ -30,19 +21,5 @@ namespace MVCSurfaceRTStore.Models
         [Required]
         public decimal Price { get; set; }
         public string ImageUrl { get; set; }
-        public virtual ICollection<ProductProperty> Properties { get; set; }
-    }
-
-    [Table("ProductProperty")]
-    public class ProductProperty
-    {
-        [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int ProductPropertyId { get; set; }        
-        public int ProductId { get; set; }
-        [Required]
-        public string Name { get; set; }
-        [Required]
-        public string Value { get; set; }
     }
 }

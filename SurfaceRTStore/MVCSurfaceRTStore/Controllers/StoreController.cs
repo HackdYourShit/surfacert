@@ -9,7 +9,7 @@ namespace MVCSurfaceRTStore.Controllers
 {
     public class StoreController : Controller
     {
-        ProductModels storeDB = new ProductModels();
+        StoreDbContext storeDB = new StoreDbContext();
 
         public ActionResult Products()
         {

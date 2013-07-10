@@ -25,15 +25,20 @@ namespace MVCSurfaceRTStore.Filters
         {
             public SimpleMembershipInitializer()
             {
-                Database.SetInitializer<UsersContext>(null);
+                Database.SetInitializer<StoreDbContext>(null);
 
                 try
                 {
-                    using (var context = new UsersContext())
+                    using (var context = new StoreDbContext())
                     {
                         if (!context.Database.Exists())
                         {
                             // Create the SimpleMembership database without Entity Framework migration schema
+                            ((IObjectContextAdapter)context).ObjectContext.CreateDatabase();
+                        }
+                        if(!context.Database.CompatibleWithModel(false))
+                        {
+                            context.Database.Delete();
                             ((IObjectContextAdapter)context).ObjectContext.CreateDatabase();
                         }
                     }

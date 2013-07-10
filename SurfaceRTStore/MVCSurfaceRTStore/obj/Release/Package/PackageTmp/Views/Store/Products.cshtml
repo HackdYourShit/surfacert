@@ -1,0 +1,18 @@
+﻿@model IEnumerable<MVCSurfaceRTStore.Models.Product>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Products</h2>
+
+<p>
+    Select from @Model.Count()
+products:</p>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.ProductName</li>
+    }
+</ul>

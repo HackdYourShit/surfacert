@@ -25,7 +25,7 @@
     </Imports>
     <Contents>
       <Content destination=".\">
-        <SourceDirectory path="C:\Users\Durandal\documents\visual studio 2012\Projects\SurfaceRTStore\SurfaceRTStore\rcf\Debug\MVCSurfaceRTStoreContent\" />
+        <SourceDirectory path="C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\rcf\Debug\MVCSurfaceRTStoreContent\" />
       </Content>
     </Contents>
   </WebRole>

@@ -11,7 +11,7 @@ namespace MVCSurfaceRTStore.Controllers
 {
     public class StoreManagerController : Controller
     {
-        private ProductModels db = new ProductModels();
+        private StoreDbContext db = new StoreDbContext();
 
         //
         // GET: /StoreManager/
