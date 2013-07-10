@@ -1,18 +1,30 @@
 ﻿@model IEnumerable<MVCSurfaceRTStore.Models.Product>
 
+@helper Truncate(string input, int length)
+ {
+    if (input.Length <= length) {
+        @input
+    } else {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
 @{
     ViewBag.Title = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Products</h2>
+<h2>Producten</h2>
 
-<p>
-    Select from @Model.Count()
-products:</p>
-<ul>
+<div class="content">
     @foreach (var product in Model)
     {
-        <li>@product.ProductName</li>
-    }
-</ul>
+        <div class="content div">
+            <ul>
+               <li>@Truncate(product.ProductName, 25)</li>                
+            </ul>
+            <a href="~/Store/Details?id=@product.ProductId" style="border-style:none">
+                <img src="@product.ImageUrl" alt="@product.ProductName" class="image">    
+            </a>
+        </div>
+    }   
+</div>

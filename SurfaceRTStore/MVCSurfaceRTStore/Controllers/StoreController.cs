@@ -22,7 +22,7 @@ namespace MVCSurfaceRTStore.Controllers
 
         public ActionResult Details(int id)
         {
-            var product = new Product { ProductName = "RT" +  id};
+            //var product = storeDB.Single(p => p.);
 
             return View(product);
         }
