@@ -1,5 +1,12 @@
 ﻿@model IEnumerable<MVCSurfaceRTStore.Models.Product>
-
+@helper Truncate(string input, int length)
+ {
+    if (input.Length <= length) {
+        @input
+    } else {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
 @{
     ViewBag.Title = "Index";
 }
@@ -31,8 +38,8 @@
         <td>
             @Html.DisplayFor(modelItem => item.ProductName)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
+        <td>>@Truncate(item.Description, 25)
+
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)

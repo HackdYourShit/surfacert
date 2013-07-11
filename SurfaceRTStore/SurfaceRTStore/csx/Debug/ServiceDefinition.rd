@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SurfaceRTStore" generation="1" functional="0" release="0" Id="3aa51143-6afe-40da-bc44-ae3790f20890" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SurfaceRTStore" generation="1" functional="0" release="0" Id="dfb08576-554d-49a2-b4cd-9f870cfc7505" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="SurfaceRTStoreGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -42,7 +42,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="MVCSurfaceRTStore" generation="1" functional="0" release="0" software="C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\csx\Debug\roles\MVCSurfaceRTStore" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="MVCSurfaceRTStore" generation="1" functional="0" release="0" software="C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\csx\Debug\roles\MVCSurfaceRTStore" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint1" protocol="http" portRanges="80" />
             </componentports>
@@ -70,9 +70,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="4f07f5d1-5724-4874-ac52-4f6b0d1a58d0" ref="Microsoft.RedDog.Contract\ServiceContract\SurfaceRTStoreContract@ServiceDefinition">
+    <implementation Id="c9b739bb-d763-4d29-92e2-e4fb20ee036b" ref="Microsoft.RedDog.Contract\ServiceContract\SurfaceRTStoreContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="fdfa8892-3cc1-4684-9014-75bd1edbe256" ref="Microsoft.RedDog.Contract\Interface\MVCSurfaceRTStore:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="1bd68603-633e-4f3d-8851-ce13ab88fd27" ref="Microsoft.RedDog.Contract\Interface\MVCSurfaceRTStore:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/SurfaceRTStore/SurfaceRTStoreGroup/MVCSurfaceRTStore:Endpoint1" />
           </inPort>

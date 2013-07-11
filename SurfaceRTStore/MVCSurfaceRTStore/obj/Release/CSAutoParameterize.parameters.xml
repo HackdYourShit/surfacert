@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:t5poot4alc.database.windows.net,1433;Database=surfacert_db;User ID=tr3x@t5poot4alc;Password=U@!9.~!^I_[*7gh;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Robert\\Documents\\GitHub\\surfacert\\SurfaceRTStore\\MVCSurfaceRTStore\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Durandal\\Documents\\GitHub\\surfacert\\SurfaceRTStore\\MVCSurfaceRTStore\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>
