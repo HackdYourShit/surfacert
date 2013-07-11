@@ -23,5 +23,10 @@
     <Imports>
       <Import moduleName="Diagnostics" />
     </Imports>
+    <Contents>
+      <Content destination=".\">
+        <SourceDirectory path="C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\rcf\Debug\MVCSurfaceRTStoreContent\" />
+      </Content>
+    </Contents>
   </WebRole>
 </ServiceDefinition>
