@@ -16,9 +16,10 @@ namespace MVCSurfaceRTStore.Models
         public int OrderId { get; set; }
         [ForeignKey("User")]
         public int? UserId { get; set; }
-        public virtual UserProfile User { get; set; }        
+        public virtual UserProfile User { get; set; }
     }
 
+    [Table("OrderedProduct")]
     public class OrderedProduct
     {
         [Key]
@@ -29,6 +30,7 @@ namespace MVCSurfaceRTStore.Models
         public virtual Product Product { get; set; }
         [ForeignKey("Order")]
         public int? OrderId { get; set; }
-        public virtual Order Order { get; set; } 
+        public virtual Order Order { get; set; }
+        public bool Paid { get; set; }
     }
 }

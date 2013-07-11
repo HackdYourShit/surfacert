@@ -18,6 +18,6 @@ namespace MVCSurfaceRTStore.Models
         public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderedProduct> OrderedProduct { get; set; }
+        public DbSet<OrderedProduct> OrderedProducts { get; set; }
     }
 }

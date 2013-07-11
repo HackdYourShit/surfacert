@@ -1,0 +1,54 @@
+﻿@model Dictionary<int, List<MVCSurfaceRTStore.Models.OrderedProduct>>
+
+@helper Truncate(string input, int length)
+ {
+    if (input.Length <= length) {
+        @input
+    } else {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+@{
+    ViewBag.Title = "Orders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bestellingen</h2>
+
+<div class="content">
+     
+        <div class="content div">
+            <ul>
+                @{  
+                    foreach (var order in Model)
+                    {
+                        decimal totalPrice = 0;
+                        bool hasPaid = true;
+                        foreach (var orderedProduct in order.Value)
+                        {
+                            totalPrice += orderedProduct.Product.Price;
+                            if (hasPaid)
+                            {
+                                hasPaid = orderedProduct.Paid;
+                            }
+                        }
+                        <li>
+                            <a href="@Url.RouteUrl(new { Controller = "Store", Action = "OrderDetails", Id = order.Key })">@Truncate("Order #" + order.Key.ToString(), 25)</a>
+                            <br />
+                            Totaal: €@string.Format("{0:C}", totalPrice).Replace("$","")
+                            <br />
+                            @if (hasPaid)
+                            {
+                                <text>Betaald: Ja</text>
+                            }
+                            else
+                            {
+                                <text>Betaald: Nee</text>
+                            }
+                        </li>                                                    
+                    }     
+                }             
+            </ul>
+        </div>
+
+</div>

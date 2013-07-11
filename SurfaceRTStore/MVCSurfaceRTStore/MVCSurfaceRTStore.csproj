@@ -268,7 +268,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\surfacert - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\surfacert - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\surfacert - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\surfacert - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -326,13 +328,15 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\MeerInformatie.cshtml" />
-    <Content Include="Views\Store\Details.cshtml" />
+    <Content Include="Views\Store\ProductDetails.cshtml" />
     <Content Include="Views\Store\Products.cshtml" />
     <Content Include="Views\StoreManager\Index.cshtml" />
     <Content Include="Views\StoreManager\Details.cshtml" />
     <Content Include="Views\StoreManager\Create.cshtml" />
     <Content Include="Views\StoreManager\Edit.cshtml" />
     <Content Include="Views\StoreManager\Delete.cshtml" />
+    <Content Include="Views\Store\Orders.cshtml" />
+    <Content Include="Views\Store\OrderDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

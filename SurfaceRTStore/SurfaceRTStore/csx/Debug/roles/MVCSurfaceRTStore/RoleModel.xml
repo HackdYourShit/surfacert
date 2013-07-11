@@ -30,14 +30,14 @@
     <Property name="Configuration" value="Debug" />
     <Property name="Platform" value="AnyCPU" />
     <Property name="RoleTargetFramework" value="v4.5" />
-    <Property name="OutputDir" value="C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\" />
+    <Property name="OutputDir" value="C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\" />
     <Property name="EntryPoint" value="MVCSurfaceRTStore.dll" />
-    <Property name="SourceDir" value="C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\" />
-    <Property name="SitePhysicalPath" value="C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\" />
+    <Property name="SourceDir" value="C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\" />
+    <Property name="SitePhysicalPath" value="C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\" />
     <Property name="TargetRuntimeVersion" value="v4.0" />
   </Properties>
   <Sites>
-    <Site name="Web" physicalDirectory="C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\">
+    <Site name="Web" physicalDirectory="C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\">
       <Bindings>
         <Binding name="Endpoint1" endpointName="Endpoint1" />
       </Bindings>

@@ -1,0 +1,29 @@
+﻿@model List<MVCSurfaceRTStore.Models.OrderedProduct>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Order: @Model.First().OrderId</h2>
+
+<div class="content div">
+    @{
+        decimal totalPrice = 0;
+        foreach (var product in Model)
+        {
+            totalPrice += product.Product.Price;
+            <ul>
+                <li>
+                    @product.Product.ProductName
+                    <br/>
+                    €@string.Format("{0:C}", product.Product.Price).Replace("$","")
+                </li>                
+            </ul>
+            <br />
+
+        }
+    }
+    <hr />
+    Totaal: €@string.Format("{0:C}", totalPrice).Replace("$","")
+</div> 

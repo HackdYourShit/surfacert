@@ -90,3 +90,5 @@ C:\Users\Durandal\documents\visual studio 2012\Projects\SurfaceRTStore\SurfaceRT
 C:\Users\Durandal\documents\visual studio 2012\Projects\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\bin\Debug\ServiceConfiguration.cscfg
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\bin\Debug\ServiceDefinition.csdef
+C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\bin\Debug\ServiceDefinition.csdef

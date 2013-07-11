@@ -22,8 +22,8 @@
             <ul>
                <li>@Truncate(product.ProductName, 25)</li>                
             </ul>
-            <a href="~/Store/Details?id=@product.ProductId" style="border-style:none">
-                <img src="@product.ImageUrl" alt="@product.ProductName" class="image">    
+            <a href="@Url.RouteUrl(new { Controller = "Store", Action = "ProductDetails", Id = product.ProductId })">
+                <img src="@product.ImageUrl" alt="@product.ProductName" class="image"/>               
             </a>
         </div>
     }   
