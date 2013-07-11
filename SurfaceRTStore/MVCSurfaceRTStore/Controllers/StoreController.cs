@@ -25,6 +25,12 @@ namespace MVCSurfaceRTStore.Controllers
             return View(product);
         }
 
+        public ActionResult Order()
+        {
+            var products = storeDB.Products.ToList();
+            return View(products);
+        }
+
         public ActionResult Orders()
         {
             var dictionary = new Dictionary<int, List<OrderedProduct>>();

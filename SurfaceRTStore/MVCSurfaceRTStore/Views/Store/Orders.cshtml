@@ -33,7 +33,7 @@
                             }
                         }
                         <li>
-                            <a href="@Url.RouteUrl(new { Controller = "Store", Action = "OrderDetails", Id = order.Key })">@Truncate("Order #" + order.Key.ToString(), 25)</a>
+                            <a href="@Url.RouteUrl(new { Controller = "Store", Action = "OrderDetails", Id = order.Key })">@Truncate("Bestelling #" + order.Key, 25)</a>
                             <br />
                             Totaal: €@string.Format("{0:C}", totalPrice).Replace("$","")
                             <br />
@@ -44,8 +44,11 @@
                             else
                             {
                                 <text>Betaald: Nee</text>
+                                <br />
                             }
-                        </li>                                                    
+                            <br />
+                            <br />
+                        </li>    
                     }     
                 }             
             </ul>

@@ -5,25 +5,41 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Order: @Model.First().OrderId</h2>
+  @{
+      if (!WebSecurity.Initialized)
+      {
+          WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", false);
+      }
+      if (User.Identity.IsAuthenticated && Model.First().UserId == WebSecurity.CurrentUserId)
+      {
+          <h2>Bestelling #@Model.First().OrderId</h2>
+      }
+  }
 
-<div class="content div">
+      <div class="content div">
     @{
-        decimal totalPrice = 0;
-        foreach (var product in Model)
+        if (!WebSecurity.Initialized)
         {
-            totalPrice += product.Product.Price;
-            <ul>
-                <li>
-                    @product.Product.ProductName
-                    <br/>
-                    €@string.Format("{0:C}", product.Product.Price).Replace("$","")
-                </li>                
-            </ul>
-            <br />
+            WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", false);
+        }
+        if (User.Identity.IsAuthenticated && Model.First().UserId == WebSecurity.CurrentUserId)
+        {
+            decimal totalPrice = 0;
+            foreach (var product in Model)
+            {
+                totalPrice += product.Product.Price;
+                <ul>
+                    <li>
+                        @product.Product.ProductName
+                        <br/>
+                        €@string.Format("{0:C}", product.Product.Price).Replace("$", "")
+                    </li>                
+                </ul>
+                <br />
 
+            }
+            <hr />
+            <text>Totaal: €@string.Format("{0:C}", totalPrice).Replace("$", "")</text>
         }
     }
-    <hr />
-    Totaal: €@string.Format("{0:C}", totalPrice).Replace("$","")
 </div> 

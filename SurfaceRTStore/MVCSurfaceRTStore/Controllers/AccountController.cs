@@ -79,7 +79,25 @@ namespace MVCSurfaceRTStore.Controllers
                 // Attempt to register the user
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
+                    /*                {
+                    //MembershipCreateStatus createstatus = MembershipCreateStatus.UserRejected;
+                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password, status: out createStatus);
+                    //if (createstatus == MembershipCreateStatus.Success)
+                    //{
+                    //    StoreProfile currentProfile = StoreProfile.GetProfile() ??
+                    //                                  StoreProfile.GetProfile(model.UserName);
+                    //    currentProfile.FirstName = model.FirstName;
+                    //    currentProfile.LastName = model.SecondName;
+                    //    currentProfile.Email = model.Email;
+                    //    currentProfile.AddressStreet = model.Street;
+                    //    currentProfile.AddressHouse = model.HouseNumber;
+                    //    currentProfile.AddressZip = model.ZipCode;
+                    //    currentProfile.AddressTown = model.Town;
+                    //    currentProfile.Phonenumber = model.PhoneNumber;
+
+                    //    currentProfile.Save();
+                    //}*/
+                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password, new { FirstName = model.FirstName, LastName = model.SecondName, Email = model.Email, AddressStreet = model.Street, AddressHouse = model.HouseNumber, AddressZip = model.ZipCode, AddressTown = model.Town, Phonenumber = model.PhoneNumber});
                     WebSecurity.Login(model.UserName, model.Password);
                     return RedirectToAction("Index", "Home");
                 }

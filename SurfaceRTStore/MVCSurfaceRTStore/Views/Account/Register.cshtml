@@ -1,19 +1,20 @@
 ﻿@model MVCSurfaceRTStore.Models.RegisterModel
 @{
-    ViewBag.Title = "Register";
+    ViewBag.Title = "Registreren";
 }
 
 <hgroup class="title">
     <h1>@ViewBag.Title.</h1>
-    <h2>Create a new account.</h2>
 </hgroup>
+<br />
+<h2>Maak een nieuw account aan.</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary()
 
     <fieldset>
-        <legend>Registration Form</legend>
+        <legend>Registratie Formulier</legend>
         <ol>
             <li>
                 @Html.LabelFor(m => m.UserName)
@@ -26,6 +27,44 @@
             <li>
                 @Html.LabelFor(m => m.ConfirmPassword)
                 @Html.PasswordFor(m => m.ConfirmPassword)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.FirstName)
+                @Html.TextBoxFor(m => m.FirstName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.SecondName)
+                @Html.TextBoxFor(m => m.SecondName)
+            </li>
+            
+            <li>
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+            </li>
+            
+            <li>
+                @Html.LabelFor(m => m.Street)
+                @Html.TextBoxFor(m => m.Street)
+            </li>
+            
+            <li>
+                @Html.LabelFor(m => m.HouseNumber)
+                @Html.TextBoxFor(m => m.HouseNumber)
+            </li>
+            
+            <li>
+                @Html.LabelFor(m => m.ZipCode)
+                @Html.TextBoxFor(m => m.ZipCode)
+            </li>
+            
+            <li>
+                @Html.LabelFor(m => m.Town)
+                @Html.TextBoxFor(m => m.Town)
+            </li>
+            
+            <li>
+                @Html.LabelFor(m => m.PhoneNumber)
+                @Html.TextBoxFor(m => m.PhoneNumber)
             </li>
         </ol>
         <input type="submit" value="Register" />

@@ -23,7 +23,10 @@
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("Meer Informatie", "MeerInformatie", "Home")</li>
                             <li>@Html.ActionLink("Producten", "Products", "Store")</li>
-                            <li>@Html.ActionLink("Bestellingen", "Orders", "Store")</li>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li>@Html.ActionLink("Bestellingen", "Orders", "Store")</li>
+                            }
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             
                         </ul>
