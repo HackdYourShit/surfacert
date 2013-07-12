@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SurfaceRTStore" generation="1" functional="0" release="0" Id="bf7cea36-33d3-4843-b10a-ee2683d71dab" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
-=======
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SurfaceRTStore" generation="1" functional="0" release="0" Id="d0c5fb05-f2b4-40b7-8460-c930d479634f" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
->>>>>>> 7caf33b9bc5b6e2295274dcb4fc163f55a8630c4
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SurfaceRTStore" generation="1" functional="0" release="0" Id="2efcaa40-61cb-428e-aa57-3dfda2bf6854" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="SurfaceRTStoreGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -74,15 +70,9 @@
     </group>
   </groups>
   <implements>
-<<<<<<< HEAD
-    <implementation Id="e4c686ff-7fbe-44e3-bf98-86db4286e273" ref="Microsoft.RedDog.Contract\ServiceContract\SurfaceRTStoreContract@ServiceDefinition">
+    <implementation Id="fc24936a-bfa8-4d51-9b1f-1e1434362d2a" ref="Microsoft.RedDog.Contract\ServiceContract\SurfaceRTStoreContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="f56f28cb-6c91-480a-8abf-21910ee83fb6" ref="Microsoft.RedDog.Contract\Interface\MVCSurfaceRTStore:Endpoint1@ServiceDefinition">
-=======
-    <implementation Id="d077ebc3-d4ab-4ab2-8a1c-9a6ff286cff0" ref="Microsoft.RedDog.Contract\ServiceContract\SurfaceRTStoreContract@ServiceDefinition">
-      <interfacereferences>
-        <interfaceReference Id="011f2af4-05cb-40a7-a9dd-504c42d3b1b0" ref="Microsoft.RedDog.Contract\Interface\MVCSurfaceRTStore:Endpoint1@ServiceDefinition">
->>>>>>> 7caf33b9bc5b6e2295274dcb4fc163f55a8630c4
+        <interfaceReference Id="2b16747e-2aaf-4f3a-b130-1447500b1ecf" ref="Microsoft.RedDog.Contract\Interface\MVCSurfaceRTStore:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/SurfaceRTStore/SurfaceRTStoreGroup/MVCSurfaceRTStore:Endpoint1" />
           </inPort>

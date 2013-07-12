@@ -26,36 +26,36 @@
           <legend>Wijzig account form</legend>
                 <ol>
                     <li>
-                        @Html.LabelFor(m => m.ModelEen)
-                        @Html.TextBoxFor(m => m.ModelEen)
+                        @Html.LabelFor(m => m.ModelEen) 
+                        @Html.DropDownListFor(m => m.ModelEen, new SelectList((List<SelectListItem>)ViewBag.DropDownItems, "Text", "Value", "0"))
                     </li>
                     <li>
                         @Html.LabelFor(m => m.ModelTwee)
-                        @Html.TextBoxFor(m => m.ModelTwee)
+                        @Html.DropDownListFor(m => m.ModelTwee, new SelectList((List<SelectListItem>)ViewBag.DropDownItems, "Text", "Value", "0"))
                     </li>
                     <li>
                         @Html.LabelFor(m => m.ModelDrie)
-                        @Html.TextBoxFor(m => m.ModelDrie)
+                        @Html.DropDownListFor(m => m.ModelDrie, new SelectList((List<SelectListItem>)ViewBag.DropDownItems, "Text", "Value", "0"))
                     </li>
                     <li>
                         @Html.LabelFor(m => m.ModelVier)
-                        @Html.TextBoxFor(m => m.ModelVier)
+                        @Html.DropDownListFor(m => m.ModelVier, new SelectList((List<SelectListItem>)ViewBag.DropDownItems, "Text", "Value", "0"))
                     </li>
                     <li>
                         @Html.LabelFor(m => m.ModelVijf)
-                        @Html.TextBoxFor(m => m.ModelVijf)
+                        @Html.DropDownListFor(m => m.ModelVijf, new SelectList((List<SelectListItem>)ViewBag.DropDownItems, "Text", "Value", "0"))
                     </li>
                     <li>
                         @Html.LabelFor(m => m.AccessoireEen)
-                        @Html.TextBoxFor(m => m.AccessoireEen)
+                        @Html.DropDownListFor(m => m.AccessoireEen, new SelectList((List<SelectListItem>)ViewBag.DropDownItems, "Text", "Value", "0"))
                     </li>
                     <li>
                         @Html.LabelFor(m => m.AccessoireTwee)
-                        @Html.TextBoxFor(m => m.AccessoireTwee)
+                        @Html.DropDownListFor(m => m.AccessoireTwee, new SelectList((List<SelectListItem>)ViewBag.DropDownItems, "Text", "Value", "0"))
                     </li>
                     <li>
                         @Html.LabelFor(m => m.AccessoireDrie)
-                        @Html.TextBoxFor(m => m.AccessoireDrie)
+                        @Html.DropDownListFor(m => m.AccessoireDrie, new SelectList((List<SelectListItem>)ViewBag.DropDownItems, "Text", "Value", "0"))
                     </li>
                 </ol>
                 <input type="submit" value="Plaats bestelling" />
