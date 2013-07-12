@@ -1,5 +1,30 @@
-﻿@{
-    ViewBag.Title = "Order";
+﻿@model IEnumerable<MVCSurfaceRTStore.Models.Product>
+
+@helper Truncate(string input, int length)
+ {
+    if (input.Length <= length) {
+        @input
+    } else {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+@{
+    ViewBag.Title = "Bestelling";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Order</h2>
+<h2>Producten</h2>
+
+<div class="content">
+    @foreach (var product in Model)
+    {
+        <div class="content div">
+            <ul>
+               <li>@Truncate(product.ProductName, 25)</li>                
+            </ul>
+            <a href="@Url.RouteUrl(new { Controller = "Store", Action = "ProductDetails", Id = product.ProductId })">
+                <img src="@product.ImageUrl" alt="@product.ProductName" class="image"/>               
+            </a>
+        </div>
+    }   
+</div>

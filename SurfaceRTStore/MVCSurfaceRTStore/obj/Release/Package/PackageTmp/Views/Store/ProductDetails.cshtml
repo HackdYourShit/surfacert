@@ -13,7 +13,7 @@
     </li>
 
     <li>
-        <b>Prijs:</b> €@Model.Price,-
+        <b>Prijs:</b> €@string.Format("{0:C}", Model.Price).Replace("$", "")
     </li>
 
 </ul>

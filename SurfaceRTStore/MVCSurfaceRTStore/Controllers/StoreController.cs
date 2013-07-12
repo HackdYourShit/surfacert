@@ -11,24 +11,124 @@ namespace MVCSurfaceRTStore.Controllers
 {
     public class StoreController : Controller
     {
-        StoreDbContext storeDB = new StoreDbContext();
+        private readonly StoreDbContext _storeDb = new StoreDbContext();
 
         public ActionResult Products()
         {
-            var products = storeDB.Products.ToList();
+            var products = _storeDb.Products.ToList();
             return View(products);
         }
 
         public ActionResult ProductDetails(int id)
         {
-            var product = storeDB.Products.FirstOrDefault(p => p.ProductId == id);
+            var product = _storeDb.Products.FirstOrDefault(p => p.ProductId == id);
             return View(product);
         }
 
         public ActionResult Order()
         {
-            var products = storeDB.Products.ToList();
-            return View(products);
+            return View(new OrderModel());
+         }
+
+        //
+        // POST: /Account/Order
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Order(OrderModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // ChangePassword will throw an exception rather than return false in certain failure scenarios.
+                using (StoreDbContext db = new StoreDbContext())
+                {
+                    Order order = new Order();
+                    order.UserId = WebSecurity.CurrentUserId;
+                    db.Orders.Add(order);
+                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    {
+                        db.OrderedProducts.Add(new OrderedProduct
+                        {
+                            OrderId = db.Orders.Last().OrderId,
+                            OrderedProductId = db.Products.ElementAt(0).ProductId,
+                            Paid = false,
+                            UserId = WebSecurity.CurrentUserId,
+                        });
+                    }
+                    for (int i = 0; i < Convert.ToInt32(model.ModelTwee); i++)
+                    {
+                        db.OrderedProducts.Add(new OrderedProduct
+                        {
+                            OrderId = db.Orders.Last().OrderId,
+                            OrderedProductId = db.Products.ElementAt(1).ProductId,
+                            Paid = false,
+                            UserId = WebSecurity.CurrentUserId,
+                        });
+                    }
+                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    {
+                        db.OrderedProducts.Add(new OrderedProduct
+                        {
+                            OrderId = db.Orders.Last().OrderId,
+                            OrderedProductId = db.Products.ElementAt(2).ProductId,
+                            Paid = false,
+                            UserId = WebSecurity.CurrentUserId,
+                        });
+                    }
+                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    {
+                        db.OrderedProducts.Add(new OrderedProduct
+                        {
+                            OrderId = db.Orders.Last().OrderId,
+                            OrderedProductId = db.Products.ElementAt(3).ProductId,
+                            Paid = false,
+                            UserId = WebSecurity.CurrentUserId,
+                        });
+                    }
+                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    {
+                        db.OrderedProducts.Add(new OrderedProduct
+                        {
+                            OrderId = db.Orders.Last().OrderId,
+                            OrderedProductId = db.Products.ElementAt(4).ProductId,
+                            Paid = false,
+                            UserId = WebSecurity.CurrentUserId,
+                        });
+                    }
+                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    {
+                        db.OrderedProducts.Add(new OrderedProduct
+                        {
+                            OrderId = db.Orders.Last().OrderId,
+                            OrderedProductId = db.Products.ElementAt(5).ProductId,
+                            Paid = false,
+                            UserId = WebSecurity.CurrentUserId,
+                        });
+                    }
+                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    {
+                        db.OrderedProducts.Add(new OrderedProduct
+                        {
+                            OrderId = db.Orders.Last().OrderId,
+                            OrderedProductId = db.Products.ElementAt(6).ProductId,
+                            Paid = false,
+                            UserId = WebSecurity.CurrentUserId,
+                        });
+                    }
+                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    {
+                        db.OrderedProducts.Add(new OrderedProduct
+                        {
+                            OrderId = db.Orders.Last().OrderId,
+                            OrderedProductId = db.Products.ElementAt(7).ProductId,
+                            Paid = false,
+                            UserId = WebSecurity.CurrentUserId,
+                        });
+                    }
+                    db.SaveChanges();
+                }
+            }
+            return RedirectToAction("Orders");
         }
 
         public ActionResult Orders()
@@ -38,10 +138,10 @@ namespace MVCSurfaceRTStore.Controllers
             {
                 if (!WebSecurity.Initialized)
                     WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", false);
-                List<Order> userOrders = storeDB.Orders.Where(o => o.UserId  == WebSecurity.CurrentUserId).ToList();
+                List<Order> userOrders = _storeDb.Orders.Where(o => o.UserId  == WebSecurity.CurrentUserId).ToList();
                 foreach (var userOrder in userOrders)
                 {
-                    var orders = storeDB.OrderedProducts.Where(op => op.OrderId == userOrder.OrderId).ToList();
+                    var orders = _storeDb.OrderedProducts.Where(op => op.OrderId == userOrder.OrderId).ToList();
                     foreach (var order in orders)
                     {
                         if (order.OrderId != null)
@@ -58,13 +158,13 @@ namespace MVCSurfaceRTStore.Controllers
 
         public ActionResult OrderDetails(int id)
         {
-                var order = storeDB.OrderedProducts.Where(p => p.OrderId == id).ToList();
+                var order = _storeDb.OrderedProducts.Where(p => p.OrderId == id).ToList();
                 return View(order);
         }
 
         public List<OrderedProduct> GetOrderContent(int id)
         {
-            return storeDB.OrderedProducts.Where(p => p.OrderId == id).ToList();
+            return _storeDb.OrderedProducts.Where(p => p.OrderId == id).ToList();
         }
     }
 }
