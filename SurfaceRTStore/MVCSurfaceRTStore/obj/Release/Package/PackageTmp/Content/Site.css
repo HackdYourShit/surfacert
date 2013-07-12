@@ -112,7 +112,12 @@ h5, h6 {
             margin-right: auto;
             border-style: none;
         }
-
+    .order div {
+        float: left;
+        width: 50%;
+        max-height:50%;
+        display: inline-block;
+    }
 .content-wrapper {
     margin: 0 auto;
     max-width: 960px;
