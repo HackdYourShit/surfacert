@@ -10,8 +10,7 @@
 <p class="message-success">@ViewBag.StatusMessage</p>
 
 <p>U bent ingelogd als <strong>@User.Identity.Name</strong>.</p>
-<br />
-@Html.ActionLink("Wijzig persoonlijke gegevens", "ManageDetails", "Account")
+<strong>@Html.ActionLink("Wijzig persoonlijke gegevens", "ManageDetails", "Account")</strong>
 <br />
 <br />
 
