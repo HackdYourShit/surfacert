@@ -14,16 +14,16 @@
 }
 
 <h2>Producten</h2>
-
 <div class="content">
+            <div class="content div">
     @{
         int i = 0;
         using (Html.BeginForm("Order", "Store"))
         {
-        @Html.AntiForgeryToken()
-        @Html.ValidationSummary()
-        <fieldset>
-          <legend>Wijzig account form</legend>
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
+            <fieldset>
+                <legend>Wijzig account form</legend>
                 <ol>
                     <li>
                         @Html.LabelFor(m => m.ModelEen) 
@@ -60,6 +60,7 @@
                 </ol>
                 <input type="submit" value="Plaats bestelling" />
             </fieldset>
-         }
+        }
     }
+                </div>
 </div>
