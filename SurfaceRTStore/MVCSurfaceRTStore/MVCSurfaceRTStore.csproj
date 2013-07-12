@@ -271,9 +271,11 @@
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\surfacert - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\surfacert - FTP %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\surfacert - FTP %284%29.pubxml" />
     <None Include="Properties\PublishProfiles\surfacert - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\surfacert - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\surfacert - Web Deploy %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\surfacert - Web Deploy %284%29.pubxml" />
     <None Include="Properties\PublishProfiles\surfacert - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />

@@ -42,15 +42,25 @@ namespace MVCSurfaceRTStore.Controllers
                 // ChangePassword will throw an exception rather than return false in certain failure scenarios.
                 using (StoreDbContext db = new StoreDbContext())
                 {
+                    if (!WebSecurity.Initialized)
+                        WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", false);
                     Order order = new Order();
-                    order.UserId = WebSecurity.CurrentUserId;
+                    order.User = db.UserProfiles.FirstOrDefault(u => u.UserId == WebSecurity.CurrentUserId);
                     db.Orders.Add(order);
+                    var productOne = db.Products.FirstOrDefault(p => p.ProductId == 1);
+                    var productTwo = db.Products.FirstOrDefault(p => p.ProductId == 2);
+                    var productThree = db.Products.FirstOrDefault(p => p.ProductId == 4);
+                    var productFour = db.Products.FirstOrDefault(p => p.ProductId == 5);
+                    var productFive = db.Products.FirstOrDefault(p => p.ProductId == 6);
+                    var productSix = db.Products.FirstOrDefault(p => p.ProductId == 7);
+                    var productSeven = db.Products.FirstOrDefault(p => p.ProductId == 8);
+                    var productEight = db.Products.FirstOrDefault(p => p.ProductId == 9);
                     for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
                     {
                         db.OrderedProducts.Add(new OrderedProduct
                         {
-                            OrderId = db.Orders.Last().OrderId,
-                            OrderedProductId = db.Products.ElementAt(0).ProductId,
+                            Order = order,
+                            Product = productOne,
                             Paid = false,
                             UserId = WebSecurity.CurrentUserId,
                         });
@@ -59,68 +69,68 @@ namespace MVCSurfaceRTStore.Controllers
                     {
                         db.OrderedProducts.Add(new OrderedProduct
                         {
-                            OrderId = db.Orders.Last().OrderId,
-                            OrderedProductId = db.Products.ElementAt(1).ProductId,
+                            Order = order,
+                            Product = productTwo,
                             Paid = false,
                             UserId = WebSecurity.CurrentUserId,
                         });
                     }
-                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    for (int i = 0; i < Convert.ToInt32(model.ModelDrie); i++)
                     {
                         db.OrderedProducts.Add(new OrderedProduct
                         {
-                            OrderId = db.Orders.Last().OrderId,
-                            OrderedProductId = db.Products.ElementAt(2).ProductId,
+                            Order = order,
+                            Product = productThree,
                             Paid = false,
                             UserId = WebSecurity.CurrentUserId,
                         });
                     }
-                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    for (int i = 0; i < Convert.ToInt32(model.ModelVier); i++)
                     {
                         db.OrderedProducts.Add(new OrderedProduct
                         {
-                            OrderId = db.Orders.Last().OrderId,
-                            OrderedProductId = db.Products.ElementAt(3).ProductId,
+                            Order = order,
+                            Product = productFour,
                             Paid = false,
                             UserId = WebSecurity.CurrentUserId,
                         });
                     }
-                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    for (int i = 0; i < Convert.ToInt32(model.ModelVijf); i++)
                     {
                         db.OrderedProducts.Add(new OrderedProduct
                         {
-                            OrderId = db.Orders.Last().OrderId,
-                            OrderedProductId = db.Products.ElementAt(4).ProductId,
+                            Order = order,
+                            Product = productFive,
                             Paid = false,
                             UserId = WebSecurity.CurrentUserId,
                         });
                     }
-                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    for (int i = 0; i < Convert.ToInt32(model.AccessoireEen); i++)
                     {
                         db.OrderedProducts.Add(new OrderedProduct
                         {
-                            OrderId = db.Orders.Last().OrderId,
-                            OrderedProductId = db.Products.ElementAt(5).ProductId,
+                            Order = order,
+                            Product = productSix,
                             Paid = false,
                             UserId = WebSecurity.CurrentUserId,
                         });
                     }
-                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    for (int i = 0; i < Convert.ToInt32(model.AccessoireTwee); i++)
                     {
                         db.OrderedProducts.Add(new OrderedProduct
                         {
-                            OrderId = db.Orders.Last().OrderId,
-                            OrderedProductId = db.Products.ElementAt(6).ProductId,
+                            Order = order,
+                            Product = productSeven,
                             Paid = false,
                             UserId = WebSecurity.CurrentUserId,
                         });
                     }
-                    for (int i = 0; i < Convert.ToInt32(model.ModelEen); i++)
+                    for (int i = 0; i < Convert.ToInt32(model.AccessoireDrie); i++)
                     {
                         db.OrderedProducts.Add(new OrderedProduct
                         {
-                            OrderId = db.Orders.Last().OrderId,
-                            OrderedProductId = db.Products.ElementAt(7).ProductId,
+                            Order = order,
+                            Product = productEight,
                             Paid = false,
                             UserId = WebSecurity.CurrentUserId,
                         });

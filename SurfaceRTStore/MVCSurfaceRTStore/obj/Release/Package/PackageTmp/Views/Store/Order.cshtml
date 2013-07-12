@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVCSurfaceRTStore.Models.Product>
+﻿@model MVCSurfaceRTStore.Models.OrderModel
 
 @helper Truncate(string input, int length)
  {
@@ -16,15 +16,50 @@
 <h2>Producten</h2>
 
 <div class="content">
-    @foreach (var product in Model)
-    {
-        <div class="content div">
-            <ul>
-               <li>@Truncate(product.ProductName, 25)</li>                
-            </ul>
-            <a href="@Url.RouteUrl(new { Controller = "Store", Action = "ProductDetails", Id = product.ProductId })">
-                <img src="@product.ImageUrl" alt="@product.ProductName" class="image"/>               
-            </a>
-        </div>
-    }   
+    @{
+        int i = 0;
+        using (Html.BeginForm("Order", "Store"))
+        {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+        <fieldset>
+          <legend>Wijzig account form</legend>
+                <ol>
+                    <li>
+                        @Html.LabelFor(m => m.ModelEen)
+                        @Html.TextBoxFor(m => m.ModelEen)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.ModelTwee)
+                        @Html.TextBoxFor(m => m.ModelTwee)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.ModelDrie)
+                        @Html.TextBoxFor(m => m.ModelDrie)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.ModelVier)
+                        @Html.TextBoxFor(m => m.ModelVier)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.ModelVijf)
+                        @Html.TextBoxFor(m => m.ModelVijf)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.AccessoireEen)
+                        @Html.TextBoxFor(m => m.AccessoireEen)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.AccessoireTwee)
+                        @Html.TextBoxFor(m => m.AccessoireTwee)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.AccessoireDrie)
+                        @Html.TextBoxFor(m => m.AccessoireDrie)
+                    </li>
+                </ol>
+                <input type="submit" value="Plaats bestelling" />
+            </fieldset>
+         }
+    }
 </div>
