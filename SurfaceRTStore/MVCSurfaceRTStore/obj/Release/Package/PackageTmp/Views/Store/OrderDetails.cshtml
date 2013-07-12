@@ -32,14 +32,14 @@
                     <li>
                         @product.Product.ProductName
                         <br/>
-                        €@string.Format("{0:C}", product.Product.Price).Replace("$", "")
+                        €@string.Format("{0:0.00}", product.Product.Price)
                     </li>                
                 </ul>
                 <br />
 
             }
             <hr />
-            <text>Totaal: €@string.Format("{0:C}", totalPrice).Replace("$", "")</text>
+            <text>Totaal: €@string.Format("{0:0.00}", totalPrice)</text>
         }
     }
 </div> 

@@ -35,15 +35,15 @@
                         <li>
                             <a href="@Url.RouteUrl(new { Controller = "Store", Action = "OrderDetails", Id = order.Key })">@Truncate("Bestelling #" + order.Key, 25)</a>
                             <br />
-                            Totaal: €@string.Format("{0:C}", totalPrice).Replace("$","")
+                            Totaal: €@string.Format("{0:0.00}", totalPrice)
                             <br />
                             @if (hasPaid)
                             {
-                                <text>Betaald: Ja</text>
+                                <text><b>Betaald:</b> Ja</text>
                             }
                             else
                             {
-                                <text>Betaald: Nee</text>
+                                <text><b>Betaald:</b> Nee</text>
                                 <br />
                             }
                             <br />
