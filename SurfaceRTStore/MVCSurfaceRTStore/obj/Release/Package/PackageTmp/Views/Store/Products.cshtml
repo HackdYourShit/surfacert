@@ -19,12 +19,11 @@
     @foreach (var product in Model)
     {
         <div class="content div">
-            <ul>
-               <li>@Truncate(product.ProductName, 25)</li>                
-            </ul>
-            <a href="@Url.RouteUrl(new { Controller = "Store", Action = "ProductDetails", Id = product.ProductId })">
+            <b>@Truncate(product.ProductName, 40)</b>
+            <ul><li><b>Prijs:</b> €@product.Price,-</li></ul>            
+                <a href="@Url.RouteUrl(new { Controller = "Store", Action = "ProductDetails", Id = product.ProductId })">
                 <img src="@product.ImageUrl" alt="@product.ProductName" class="image"/>               
-            </a>
+            </a>            
         </div>
     }   
 </div>

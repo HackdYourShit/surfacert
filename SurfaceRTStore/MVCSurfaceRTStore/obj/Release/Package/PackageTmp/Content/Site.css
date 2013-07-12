@@ -100,13 +100,13 @@ h5, h6 {
 
     .content div {
         float: left;
-        width: 25%;
-        max-height:100%;
+        width: 33%;
+        max-height:33%;
         display: inline-block;
     }
-
         .content div img {
-            max-width: 90%;
+            max-width: 100%;
+            max-height:100px;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -240,13 +240,13 @@ ul#menu {
 }
 
     .featured .content-wrapper {
-        background-color: #7ac0da;
-        background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
-        background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        color: #3e5667;
+        background-color: #00ADEF;
+        background-image: -ms-linear-gradient(left, #00ADEF 0%, #00ADEF 100%);
+        background-image: -o-linear-gradient(left, #00ADEF 0%, #00ADEF 100%);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #00ADEF), color-stop(1, #00ADEF));
+        background-image: -webkit-linear-gradient(left, #00ADEF 0%, #00ADEF 100%);
+        background-image: linear-gradient(left, #00ADEF 0%, #00ADEF 100%);
+        color: #fff;
         padding: 20px 40px 30px 40px;
     }
 
@@ -781,3 +781,4 @@ tr.pager td {
             margin: 0;
         }
 }
+

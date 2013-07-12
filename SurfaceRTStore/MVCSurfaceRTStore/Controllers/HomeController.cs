@@ -11,7 +11,7 @@ namespace MVCSurfaceRTStore.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            ViewBag.Message = "De revolutionaire nieuwe tablet van Microsoft, is een technisch hoogstandje en een kunstwerk. Surface heeft een ultralichte en uiterst duurzame magnesiumbehuizing en zal jouw manier van werken en ontspannen veranderen.";
 
             return View();
         }
