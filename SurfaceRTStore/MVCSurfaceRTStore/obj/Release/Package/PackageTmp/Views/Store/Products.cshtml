@@ -21,11 +21,11 @@
         <div class="content div">
             <b><a href="@Url.RouteUrl(new { Controller = "Store", Action = "ProductDetails", Id = product.ProductId })">@Truncate(product.ProductName, 40)</a></b>
             <ul><li><b>Prijs:</b> €@string.Format("{0:0.00}", product.Price)</li></ul>            
-                <a href="@Url.RouteUrl(new { Controller = "Store", Action = "ProductDetails", Id = product.ProductId })">
+            <a href="@Url.RouteUrl(new { Controller = "Store", Action = "ProductDetails", Id = product.ProductId })">
                 <img src="@product.ImageUrl" alt="@product.ProductName" />               
             </a>            
         </div>
     }   
     <br />
-    <p>De Surface RT wordt standaard geleverd met één oplader!</p>
 </div>
+<p>De Surface RT wordt standaard geleverd met één oplader!</p>

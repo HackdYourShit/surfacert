@@ -268,6 +268,5 @@ C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\bin\
 C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\bin\ru\System.Spatial.resources.dll
 C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\obj\Debug\MVCSurfaceRTStore.csprojResolveAssemblyReference.cache
 C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\obj\Debug\MVCSurfaceRTStore.dll
 C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\obj\Debug\MVCSurfaceRTStore.pdb
