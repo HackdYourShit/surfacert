@@ -55,56 +55,56 @@ namespace MVCSurfaceRTStore.Models
         [Required]
         [StringLength(2, ErrorMessage = "U kunt dit veld niet leeg laten.", MinimumLength = 1)]
         [RegularExpression("([0-9]+)", ErrorMessage = "U heeft geen geld getal ingevuld.")]
-        [Display(Name = "Aantal van het model: Surface RT 32GB")]
+        [Display(Name = "Surface RT 32GB")]
         [DefaultValue(0)]
         public string ModelEen { get; set; }
 
         [Required]
         [StringLength(2, ErrorMessage = "U kunt dit veld niet leeg laten.", MinimumLength = 1)]
         [RegularExpression("([0-9]+)", ErrorMessage = "U heeft geen geld getal ingevuld.")]
-        [Display(Name = "Aantal van het model: Surface RT 32GB + Touch Cover Zwart")]
+        [Display(Name = "Surface RT 32GB + Touch Cover Zwart")]
         [DefaultValue(0)]
         public string ModelTwee { get; set; }
 
         [Required]
         [StringLength(2, ErrorMessage = "U kunt dit veld niet leeg laten.", MinimumLength = 1)]
         [RegularExpression("([0-9]+)", ErrorMessage = "U heeft geen geld getal ingevuld.")]
-        [Display(Name = "Aantal van het model: Surface RT 32GB + Touch Cover Cyaan")]
+        [Display(Name = "Surface RT 32GB + Touch Cover Cyaan")]
         [DefaultValue(0)]
         public string ModelDrie { get; set; }
 
         [Required]
         [StringLength(2, ErrorMessage = "U kunt dit veld niet leeg laten.", MinimumLength = 1)]
         [RegularExpression("([0-9]+)", ErrorMessage = "U heeft geen geld getal ingevuld.")]
-        [Display(Name = "Aantal van het model: Surface RT 32GB + Touch Cover Wit")]
+        [Display(Name = "Surface RT 32GB + Touch Cover Wit")]
         [DefaultValue(0)]
         public string ModelVier { get; set; }
 
         [Required]
         [StringLength(2, ErrorMessage = "U kunt dit veld niet leeg laten.", MinimumLength = 1)]
         [RegularExpression("([0-9]+)", ErrorMessage = "U heeft geen geld getal ingevuld.")]
-        [Display(Name = "Aantal van het model: Surface RT 32GB + Type Cover Zwart")]
+        [Display(Name = "Surface RT 32GB + Type Cover Zwart")]
         [DefaultValue(0)]
         public string ModelVijf { get; set; }
 
         [Required]
         [StringLength(2, ErrorMessage = "U kunt dit veld niet leeg laten.", MinimumLength = 1)]
         [RegularExpression("([0-9]+)", ErrorMessage = "U heeft geen geld getal ingevuld.")]
-        [Display(Name = "Aantal van het accessoire: Surface VGA Adapter")]
+        [Display(Name = "Surface VGA Adapter")]
         [DefaultValue(0)]
         public string AccessoireEen { get; set; }
 
         [Required]
         [StringLength(2, ErrorMessage = "U kunt dit veld niet leeg laten.", MinimumLength = 1)]
         [RegularExpression("([0-9]+)", ErrorMessage = "U heeft geen geld getal ingevuld.")]
-        [Display(Name = "Aantal van het accessoire: Surface HD Digital AV-adapter")]
+        [Display(Name = "Surface HD Digital AV-adapter")]
         [DefaultValue(0)]
         public string AccessoireTwee { get; set; }
 
         [Required]
         [StringLength(2, ErrorMessage = "U kunt dit veld niet leeg laten.", MinimumLength = 1)]
         [RegularExpression("([0-9]+)", ErrorMessage = "U heeft geen geld getal ingevuld.")]
-        [Display(Name = "Aantal van het accessoire: Surface Voeding 24W")]
+        [Display(Name = "Surface Voeding 24W")]
         [DefaultValue(0)]
         public string AccessoireDrie { get; set; }
     }
