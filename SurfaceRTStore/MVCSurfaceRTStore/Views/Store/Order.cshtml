@@ -12,8 +12,13 @@
     ViewBag.Title = "Bestelling";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Producten</h2>
+      @if (!WebSecurity.Initialized)
+      {
+          WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", false);
+      }
+      @if (User.Identity.IsAuthenticated)
+      {
+          <h2>Producten</h2>
             <div class="order div">
     @{
         int i = 0;
@@ -63,4 +68,4 @@
         }
     }
                 </div>
-
+      }
