@@ -205,6 +205,7 @@ namespace MVCSurfaceRTStore.Controllers
                     try
                     {
                         WebSecurity.CreateAccount(User.Identity.Name, model.NewPassword);
+
                         return RedirectToAction("Manage", new { Message = ManageMessageId.SetPasswordSuccess });
                     }
                     catch (Exception)
@@ -216,6 +217,63 @@ namespace MVCSurfaceRTStore.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        //
+        // GET: /Account/ManageDetails
+
+        public ActionResult ManageDetails()
+        {
+            using (StoreDbContext db = new StoreDbContext())
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    var profile = db.UserProfiles.FirstOrDefault(p => p.UserId == WebSecurity.CurrentUserId);
+                    if (profile != null)
+                    {
+                        EditPersonalModel view = new EditPersonalModel
+                        {
+                            Email = profile.Email,
+                            FirstName = profile.FirstName,
+                            HouseNumber = profile.AddressHouse,
+                            PhoneNumber = profile.Phonenumber,
+                            SecondName = profile.LastName,
+                            Street = profile.AddressStreet,
+                            Town = profile.AddressTown,
+                            ZipCode = profile.AddressZip,
+                        };
+                        return View(view);
+                    }
+                }
+                return View();
+            }
+        }
+
+        //
+        // POST: /Account/ManageDetails
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ManageDetails(EditPersonalModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // ChangePassword will throw an exception rather than return false in certain failure scenarios.
+                using (StoreDbContext db = new StoreDbContext())
+                {
+                    var profile = db.UserProfiles.FirstOrDefault(p => p.UserId == WebSecurity.CurrentUserId);
+                    profile.FirstName = model.FirstName;
+                    profile.LastName = model.SecondName;
+                    profile.Email = model.Email;
+                    profile.AddressStreet = model.Street;
+                    profile.AddressHouse = model.HouseNumber;
+                    profile.AddressZip = model.ZipCode;
+                    profile.AddressTown = model.Town;
+                    profile.Phonenumber = model.PhoneNumber;
+                    db.SaveChanges();
+                }
+            }
+            return RedirectToAction("ManageDetails");
         }
 
         //

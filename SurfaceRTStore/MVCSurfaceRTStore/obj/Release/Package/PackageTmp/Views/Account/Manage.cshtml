@@ -10,6 +10,10 @@
 <p class="message-success">@ViewBag.StatusMessage</p>
 
 <p>U bent ingelogd als <strong>@User.Identity.Name</strong>.</p>
+<br />
+@Html.ActionLink("Wijzig persoonlijke gegevens", "ManageDetails", "Account")
+<br />
+<br />
 
 @if (ViewBag.HasLocalPassword)
 {
@@ -20,6 +24,6 @@ else
     @Html.Partial("_SetPasswordPartial")
 }
 
-@section Scripts {
+section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

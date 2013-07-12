@@ -53,6 +53,56 @@ namespace MVCSurfaceRTStore.Models
         public string ConfirmPassword { get; set; }
     }
 
+    public class EditPersonalModel
+    {
+        [Required]
+        [StringLength(100, ErrorMessage = "U heeft geen voornaam ingevuld.", MinimumLength = 1)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Voornaam")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "U heeft geen achternaam ingevuld.", MinimumLength = 1)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Achternaam")]
+        public string SecondName { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "U heeft geen e-mailadres ingevuld.", MinimumLength = 1)]
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress(ErrorMessage = "U heeft geen geldig e-mailadres ingevuld.")]
+        [Display(Name = "E-mailadres")]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "U heeft geen straat ingevuld.", MinimumLength = 1)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Straat")]
+        public string Street { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "U heeft geen huisnummer ingevuld.", MinimumLength = 1)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Huisnummer")]
+        public string HouseNumber { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "U heeft geen postcode ingevuld.", MinimumLength = 1)]
+        [RegularExpression("^[0-9]{4}[a-z|A-Z]{2}$", ErrorMessage = "U heeft geen geldige postcode ingevuld")]
+        [Display(Name = "Postcode")]
+        public string ZipCode { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "U heeft geen postcode ingevuld.", MinimumLength = 1)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Woonplaats")]
+        public string Town { get; set; }
+
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefoonnummer")]
+        public string PhoneNumber { get; set; }
+    }
+
     public class LoginModel
     {
         [Required]
