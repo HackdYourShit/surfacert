@@ -271,3 +271,4 @@ C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\bin\
 C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\obj\Debug\MVCSurfaceRTStore.csprojResolveAssemblyReference.cache
 C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\obj\Debug\MVCSurfaceRTStore.dll
 C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\obj\Debug\MVCSurfaceRTStore.pdb
+C:\Users\Robert\Documents\GitHub\surfacert\SurfaceRTStore\MVCSurfaceRTStore\bin\MVCSurfaceRTStore.dll.CodeAnalysisLog.xml
