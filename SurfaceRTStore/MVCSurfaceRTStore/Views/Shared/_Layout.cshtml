@@ -20,13 +20,14 @@
                     </section>
                     <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Meer Informatie", "MeerInformatie", "Home")</li>
+                            <li>@Html.ActionLink("Informatie", "Index", "Home")</li>
                             <li>@Html.ActionLink("Producten", "Products", "Store")</li>
                             @if (User.Identity.IsAuthenticated)
                             {
+                                <li>@Html.ActionLink("Bestel", "Order", "Store")</li>
                                 <li>@Html.ActionLink("Bestellingen", "Orders", "Store")</li>
-                            }                            
+                            } 
+                            <li>@Html.ActionLink("Contactgegevens", "Contact", "Home")</li>                          
                         </ul>
                     </nav>
                 </div>
