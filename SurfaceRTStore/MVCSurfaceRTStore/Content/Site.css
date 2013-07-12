@@ -114,7 +114,7 @@ h5, h6 {
         }
     .order div {
         float: left;
-        width: 50%;
+        width: 75%;
         max-height:50%;
         display: inline-block;
     }

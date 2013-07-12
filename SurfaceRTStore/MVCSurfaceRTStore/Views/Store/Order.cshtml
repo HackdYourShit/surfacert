@@ -14,7 +14,6 @@
 }
 
 <h2>Producten</h2>
-<div class="content">
             <div class="order div">
     @{
         int i = 0;
@@ -22,6 +21,7 @@
         {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary()
+        <br/>
             <fieldset>
                 <legend>Wijzig account form</legend>
                 <ol>
@@ -63,4 +63,4 @@
         }
     }
                 </div>
-</div>
+
