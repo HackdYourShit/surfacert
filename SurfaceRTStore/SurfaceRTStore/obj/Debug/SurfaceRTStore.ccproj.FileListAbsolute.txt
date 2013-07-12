@@ -140,6 +140,7 @@ C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\D
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\bin\Microsoft.WindowsAzure.Storage.dll
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\bin\Microsoft.WindowsAzure.Storage.xml
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\bin\MVCSurfaceRTStore.dll
+C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\bin\MVCSurfaceRTStore.dll.CodeAnalysisLog.xml
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\bin\MVCSurfaceRTStore.pdb
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\bin\Newtonsoft.Json.dll
 C:\Users\Durandal\Documents\GitHub\surfacert\SurfaceRTStore\SurfaceRTStore\obj\Debug\MVCSurfaceRTStore\bin\Newtonsoft.Json.xml
