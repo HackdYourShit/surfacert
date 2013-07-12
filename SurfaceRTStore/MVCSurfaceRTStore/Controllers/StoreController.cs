@@ -28,22 +28,22 @@ namespace MVCSurfaceRTStore.Controllers
         public ActionResult Order()
         {
             List<SelectListItem> items = new List<SelectListItem>();
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 10; i++)
             {
                 if (i == 0)
                 {
                     items.Add(new SelectListItem
                     {
                         Selected = true,
-                        Text = (i + 1).ToString(),
-                        Value = (i + 1).ToString(),
+                        Text = (i).ToString(),
+                        Value = (i).ToString(),
                     });
                 }
                 else
                     items.Add(new SelectListItem
                     {
-                        Text = (i + 1).ToString(),
-                        Value = (i + 1).ToString(),
+                        Text = (i).ToString(),
+                        Value = (i).ToString(),
                     });
             }
             ViewBag.DropDownItems = items;
