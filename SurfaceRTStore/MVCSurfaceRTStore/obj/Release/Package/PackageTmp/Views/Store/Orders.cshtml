@@ -15,9 +15,8 @@
 
 <h2>Bestellingen</h2>
 <br/>
-<div class="content">
+<div class="order">
      
-        <div class="content div">
             <ul>
                 @{  
                     foreach (var order in Model)
@@ -39,11 +38,11 @@
                             <br />
                             @if (hasPaid)
                             {
-                                <text><b>Betaald:</b> Ja</text>
+                                <text><b>Betaling ontvangen:</b> Ja</text>
                             }
                             else
                             {
-                                <text><b>Betaald:</b> Nee</text>
+                                <text><b>Betaling ontvangen:</b> Nee</text>
                                 <br />
                             }
                             <br />
@@ -52,6 +51,14 @@
                     }     
                 }             
             </ul>
-        </div>
+            
+            <p>De betaling geschiedt door middel van een overboeking naar de volgende bankgegevens:</p>
+            <br/>
+            <img src="http://i.imgur.com/shLwShA.png" alt=""/>
+            <br/>
+            <p>Gelieven het volgende formaat aan te houden: *inlognaam* - *bestelnummer*</p>
+            <p><b>Bijvoorbeeld:</b> mijninlognaam - 1</p>
+            <p>Vergeet in ieder geval <b>NIET</b> het bestelnummer bij de betaling te vermelden!</p>
+      
 
 </div>
